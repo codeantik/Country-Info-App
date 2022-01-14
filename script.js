@@ -1,3 +1,4 @@
+// when window is loaded fetch all countries
 window.onload = function() {
     let resultContainer = document.querySelector('.result');
     fetch(`https://restcountries.com/v3.1/all`)
@@ -15,13 +16,16 @@ window.onload = function() {
         });
 }
 
+// when content is loaded
 document.addEventListener('DOMContentLoaded', function() {
     let searchQuery;
+    // get search query
     document.querySelector('.search-input').addEventListener('change', function(e) {
         searchQuery = e.target.value;
         console.log(searchQuery);
     })
 
+    // set the result data
     function setResult(data) {
         console.log(data);
         let country = data[0]
@@ -50,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `
     }
 
+    // search for the query
     document.querySelector('.search-btn').addEventListener('click', function(e) {
         e.preventDefault()
         if(!searchQuery) {
@@ -72,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
     })
 
+    // search for the query from the list of countries
     document.querySelectorAll('.list-item p').forEach(item => {
         console.log(item)
         item.addEventListener('click', function(e) {
