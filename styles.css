@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    /* height: 100rem; */
+    width: 100%;
+    max-width: 1400px;
+    margin: 15px auto;
+    padding: 0 15px;
+    background-color: rgb(229, 235, 240);
+    border-radius: 10px;
+}
+
+.container .heading {
+    width: 100%;
+    margin: 15px auto 20px;
+    text-align: center;
+    color: rgb(119, 34, 175);
+    font-size: 2.2rem;
+    font-weight: light;
+}
+
+.search {
+    width: 100%;
+    height: 20vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search form {
+    width: 60%;
+    height: 100%;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search form input:first-of-type {
+    width: 80%;
+    outline: none;
+    padding: 15px 20px;
+}
+
+.search form input:last-of-type {
+    width: 20%;
+    outline: none;
+    padding: 15px 20px;
+    background-color: rgb(33, 133, 221);
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgb(191, 155, 212);
+    font-size: 15px;
+}
+
+.result {
+    width: 100%;
+    /* background-color: rgb(219, 187, 184); */
+    background-color: rgb(196, 216, 240);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 3;
+    /* border-radius: 10px; */
+    margin-bottom: 20px;
+}
+
+.result .list-item {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    background-color: rgb(191, 155, 212);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.result .detail-item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgb(191, 155, 212);
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid white;
+}
+
+.result .list-item p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(33, 133, 221);
+    height: 20px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 5px auto;
+}
+.result .detail-item p {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(33, 133, 221);
+    width: 100%;
+    padding: 10px;
+    margin: 5px auto;
+}
+
+.result .detail-item span {
+    color:rgb(229, 235, 240);
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.result .list-item:hover {
+    cursor: pointer;
+    background-color: rgb(174, 97, 219);
+}
+
+.result .list-item:hover > p {
+    color: rgb(33, 209, 221);
+}
+
+.result .list-item:hover > img {
+    opacity: 0.5;
+    border: rgb(33, 209, 221) solid 1.5px;
+}
